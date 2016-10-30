@@ -321,7 +321,7 @@ class apache::params inherits ::apache::version {
     $passenger_conf_file         = 'passenger.conf'
     $passenger_conf_package_file = undef
 
-    if ($::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemrelease, '14.04') < 0) or ($::operatingsystem == 'Debian' and versioncmp($::operatingsystemrelease, '7') < 0) {
+    if ($::operatingsystem == 'Ubuntu' and versioncmp($::operatingsystemrelease, '14.04') < 0) or ($::operatingsystem == 'Debian' and versioncmp($::operatingsystemrelease, '7.0') < 0) {
       $passenger_root         = '/usr'
       $passenger_ruby         = '/usr/bin/ruby'
       $passenger_default_ruby = undef
